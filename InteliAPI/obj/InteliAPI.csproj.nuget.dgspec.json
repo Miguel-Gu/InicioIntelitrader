@@ -60,17 +60,13 @@
               "target": "Package",
               "version": "[5.0.10, )"
             },
-            "Serilog": {
+            "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[2.11.0, )"
+              "version": "[5.0.0, )"
             },
-            "Serilog.Sinks.Console": {
+            "Serilog.Sinks.MSSqlServer": {
               "target": "Package",
-              "version": "[4.0.1, )"
-            },
-            "Serilog.Sinks.MySQL": {
-              "target": "Package",
-              "version": "[4.6.0, )"
+              "version": "[5.7.1, )"
             }
           },
           "imports": [

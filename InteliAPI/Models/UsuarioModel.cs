@@ -2,7 +2,6 @@
 using InteliAPI.Controllers;
 using InteliAPI.Domains;
 using Microsoft.Extensions.Logging;
-using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,8 +11,7 @@ namespace InteliAPI.Models
 {
     public class UsuarioModel
     {
-        IntelitraderContext ctx = new();
-
+        readonly IntelitraderContext ctx = new();
         public void Cadastrar(Usuario novoUsuario)
         {
             if (novoUsuario != null)
@@ -62,7 +60,7 @@ namespace InteliAPI.Models
         public string GeraId()
         {
             bool existe = true;
-            var chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+            var chars = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz0123456789";
             var random = new Random();
             List<Usuario> lista = Listar();
             string id = "";

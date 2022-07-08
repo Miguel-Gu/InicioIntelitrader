@@ -2,6 +2,8 @@
 using InteliAPI.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Logging;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +16,12 @@ namespace InteliAPI.Controllers
     [ApiController]
     public class UsuarioController : ControllerBase
     {
-        UsuarioModel usuarioModel = new();
+        private readonly ILogger<UsuarioController> _logger;
+        public UsuarioController(ILogger<UsuarioController> logger)
+        {
+            _logger = logger;
+        }
+        private readonly UsuarioModel usuarioModel = new();
 
         [HttpPost("Cadastrar")]
         public IActionResult Cadastrar(Usuario novoUsuario)
@@ -22,10 +29,12 @@ namespace InteliAPI.Controllers
             try
             {
                 usuarioModel.Cadastrar(novoUsuario);
+                _logger.LogInformation("Usuario "+ novoUsuario.FirstName + " Cadastrado");
                 return StatusCode(201);
             }
             catch (Exception error)
             {
+                _logger.LogError("Erro ao cadastrar usuario");
                 return BadRequest(new
                 {
                     mensagem = "Erro ao cadastrar usuário",
@@ -43,6 +52,7 @@ namespace InteliAPI.Controllers
             }
             catch (Exception error)
             {
+                _logger.LogError("Erro ao listar usuários");
                 return BadRequest(new
                 {
                     mensagem = "Erro ao listar usuários",
@@ -57,10 +67,12 @@ namespace InteliAPI.Controllers
             try
             {
                 usuarioModel.Atualizar(id, usuarioAt);
+                _logger.LogInformation("Usuario "+ id + " Atualizado");
                 return StatusCode(204);
             }
             catch (Exception error)
             {
+                _logger.LogError("Erro ao atualizar usuário");
                 return BadRequest(new
                 {
                     mensagem = "Erro ao atualizar usuário",
@@ -75,10 +87,12 @@ namespace InteliAPI.Controllers
             try
             {
                 usuarioModel.Excluir(id);
+                _logger.LogInformation("Usuario  "+ id + " Deletado");
                 return StatusCode(204);
             }
             catch (Exception error)
             {
+                _logger.LogError("Erro ao excluir usuário");
                 return BadRequest(new
                 {
                     mensagem = "Erro ao excluir usuário",

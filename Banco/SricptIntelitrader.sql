@@ -21,3 +21,4 @@ VALUES  ('sH2m5T', 'Gustavo', 'Silva', '17'),
 GO
 
 SELECT * FROM usuario
+SELECT * FROM logs
