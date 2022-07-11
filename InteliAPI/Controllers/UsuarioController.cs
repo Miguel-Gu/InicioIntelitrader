@@ -30,7 +30,7 @@ namespace InteliAPI.Controllers
             {
                 usuarioModel.Cadastrar(novoUsuario);
                 _logger.LogInformation("Usuario "+ novoUsuario.FirstName + " Cadastrado");
-                return StatusCode(201);
+                return StatusCode(201, novoUsuario);
             }
             catch (Exception error)
             {
@@ -66,9 +66,9 @@ namespace InteliAPI.Controllers
         {
             try
             {
-                usuarioModel.Atualizar(id, usuarioAt);
+                Usuario usuario = usuarioModel.Atualizar(id, usuarioAt);
                 _logger.LogInformation("Usuario "+ id + " Atualizado");
-                return StatusCode(204);
+                return Ok(usuario);
             }
             catch (Exception error)
             {
@@ -88,7 +88,7 @@ namespace InteliAPI.Controllers
             {
                 usuarioModel.Excluir(id);
                 _logger.LogInformation("Usuario  "+ id + " Deletado");
-                return StatusCode(204);
+                return NoContent();
             }
             catch (Exception error)
             {

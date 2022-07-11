@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31613.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InteliAPI", "InteliAPI.csproj", "{4BD6D39C-B911-4D26-B716-A6C581AE7A7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "InteliAPI", "InteliAPI.csproj", "{4BD6D39C-B911-4D26-B716-A6C581AE7A7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "..\Test\Test.csproj", "{9251BA7C-F204-48D9-B80D-1130A548167E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{4BD6D39C-B911-4D26-B716-A6C581AE7A7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4BD6D39C-B911-4D26-B716-A6C581AE7A7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4BD6D39C-B911-4D26-B716-A6C581AE7A7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9251BA7C-F204-48D9-B80D-1130A548167E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9251BA7C-F204-48D9-B80D-1130A548167E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9251BA7C-F204-48D9-B80D-1130A548167E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9251BA7C-F204-48D9-B80D-1130A548167E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

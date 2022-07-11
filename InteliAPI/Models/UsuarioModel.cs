@@ -27,7 +27,7 @@ namespace InteliAPI.Models
             return ctx.Usuarios.ToList();
         }
 
-        public void Atualizar(string id, Usuario usuarioAt)
+        public Usuario Atualizar(string id, Usuario usuarioAt)
         {
             Usuario usuarioBuscado = BuscarPorId(id);
 
@@ -38,6 +38,11 @@ namespace InteliAPI.Models
                 usuarioBuscado.Age = usuarioAt.Age;
                 ctx.Usuarios.Update(usuarioBuscado);
                 ctx.SaveChanges();
+
+                return usuarioBuscado;
+            } else
+            {
+                return null;
             }
         }
 
