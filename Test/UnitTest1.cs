@@ -1,10 +1,8 @@
-using InteliAPI.Controllers;
-using InteliAPI.Domains;
+using IntelitraderAPI.Controllers;
+using IntelitraderAPI.Domains;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
-using System;
-using Xunit;
 
 namespace Test
 {

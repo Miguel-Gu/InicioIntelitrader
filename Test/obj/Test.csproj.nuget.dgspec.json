@@ -4,29 +4,29 @@
     "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\Test\\Test.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\InteliAPI\\InteliAPI.csproj": {
+    "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderAPI\\IntelitraderAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\InteliAPI\\InteliAPI.csproj",
-        "projectName": "InteliAPI",
-        "projectPath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\InteliAPI\\InteliAPI.csproj",
+        "projectUniqueName": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderAPI\\IntelitraderAPI.csproj",
+        "projectName": "IntelitraderAPI",
+        "projectPath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderAPI\\IntelitraderAPI.csproj",
         "packagesPath": "C:\\Users\\gumig\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\InteliAPI\\obj\\",
+        "outputPath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gumig\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -37,36 +37,40 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.AspNetCore.Mvc.NewtonsoftJson": {
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.SqlServer": {
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[6.0.7, )"
             },
             "Microsoft.EntityFrameworkCore.Tools": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[5.0.10, )"
+              "version": "[6.0.7, )"
             },
             "Serilog.AspNetCore": {
               "target": "Package",
-              "version": "[5.0.0, )"
+              "version": "[6.0.0, )"
             },
             "Serilog.Sinks.MSSqlServer": {
               "target": "Package",
               "version": "[5.7.1, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.3.2, )"
             }
           },
           "imports": [
@@ -87,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     },
@@ -105,18 +109,18 @@
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net5.0"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\InteliAPI\\InteliAPI.csproj": {
-                "projectPath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\InteliAPI\\InteliAPI.csproj"
+              "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderAPI\\IntelitraderAPI.csproj": {
+                "projectPath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderAPI\\IntelitraderAPI.csproj"
               }
             }
           }
@@ -128,12 +132,12 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.NET.Test.Sdk": {
               "target": "Package",
-              "version": "[16.9.4, )"
+              "version": "[17.1.0, )"
             },
             "Moq": {
               "target": "Package",
@@ -143,7 +147,7 @@
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
               "target": "Package",
-              "version": "[3.0.2, )"
+              "version": "[3.1.2, )"
             },
             "xunit": {
               "target": "Package",
@@ -171,7 +175,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.302\\RuntimeIdentifierGraph.json"
         }
       }
     }
