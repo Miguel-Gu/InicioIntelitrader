@@ -23,7 +23,7 @@ namespace IntelitraderAPI.Contexts
         {
             if (!optionsBuilder.IsConfigured)
             {
-                optionsBuilder.UseSqlServer("Data Source=LAPTOP-GBJVH1HS\\SQLEXPRESS; initial catalog=INTELITRADER; user Id=sa; pwd=senai@132;");
+                optionsBuilder.UseSqlServer("Data Source=sqldata; initial catalog=INTELITRADER; user Id=SA; pwd=senai@132;");
             }
         }
 

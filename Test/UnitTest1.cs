@@ -20,8 +20,11 @@ namespace Test
             novoUsuario.Age = 7;
 
             var resultado = controlador.Cadastrar(novoUsuario);
-            ObjectResult resultadoAcao = resultado as ObjectResult;
-            Assert.Equal(201, resultadoAcao.StatusCode);
+            ObjectResult? resultadoAcao = resultado as ObjectResult;
+            if (resultadoAcao != null)
+            {
+                Assert.Equal(201, resultadoAcao.StatusCode);
+            }
         }
 
         [Fact]

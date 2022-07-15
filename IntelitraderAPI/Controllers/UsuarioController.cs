@@ -60,7 +60,7 @@ namespace IntelitraderAPI.Controllers
         {
             try
             {
-                Usuario usuario = usuarioModel.Atualizar(id, usuarioAt);
+                Usuario? usuario = usuarioModel.Atualizar(id, usuarioAt);
                 _logger.LogInformation("Usuario " + id + " Atualizado");
                 return Ok(usuario);
             }

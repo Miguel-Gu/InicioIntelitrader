@@ -1,9 +1,8 @@
 using IntelitraderAPI.Contexts;
+using IntelitraderAPI.Services;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
 using Serilog;
-using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -42,6 +41,8 @@ if (!app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+DatabaseManagementService.MigrationInitialisation(app);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

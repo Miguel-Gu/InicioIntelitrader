@@ -21,9 +21,9 @@ namespace IntelitraderAPI.Models
             return ctx.Usuarios.ToList();
         }
 
-        public Usuario Atualizar(string id, Usuario usuarioAt)
+        public Usuario? Atualizar(string id, Usuario usuarioAt)
         {
-            Usuario usuarioBuscado = BuscarPorId(id);
+            Usuario? usuarioBuscado = BuscarPorId(id);
 
             if (usuarioBuscado != null)
             {
@@ -43,16 +43,16 @@ namespace IntelitraderAPI.Models
 
         public void Excluir(string id)
         {
-            Usuario usuarioBuscado = BuscarPorId(id);
+            Usuario? usuarioBuscado = BuscarPorId(id);
 
             if (usuarioBuscado != null)
             {
-                ctx.Usuarios.Remove(BuscarPorId(id));
+                ctx.Usuarios.Remove(usuarioBuscado);
                 ctx.SaveChanges();
             }
         }
 
-        public Usuario BuscarPorId(string id)
+        public Usuario? BuscarPorId(string id)
         {
             return ctx.Usuarios.FirstOrDefault(e => e.Id == id);
         }

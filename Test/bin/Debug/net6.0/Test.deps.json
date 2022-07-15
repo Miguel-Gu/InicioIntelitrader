@@ -1915,6 +1915,7 @@
       "IntelitraderAPI/1.0.0": {
         "dependencies": {
           "Microsoft.AspNetCore.Mvc.NewtonsoftJson": "6.0.7",
+          "Microsoft.EntityFrameworkCore": "6.0.7",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.7",
           "Serilog.AspNetCore": "6.0.0",
           "Serilog.Sinks.MSSqlServer": "5.7.1",
