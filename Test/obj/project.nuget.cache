@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TaVOZQdeOZ2KbSZGZgyhqTUg9SB3otoL5BAM24E9p6i7UoBJ4ahoU/iXib0DBzB0/i9rxOORMneGvQWbn8Sf/A==",
+  "dgSpecHash": "MSrUDgBysNo3q4dzj1kddVAFIbDFSv0GvMR0obv7gUB//oQCWe+qyEgf9rxDj4WalyKzTE6neX/tzCCdR6NPtw==",
   "success": true,
   "projectFilePath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\Test\\Test.csproj",
   "expectedPackageFiles": [
@@ -47,6 +47,7 @@
     "C:\\Users\\gumig\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
     "C:\\Users\\gumig\\.nuget\\packages\\microsoft.testplatform.objectmodel\\17.1.0\\microsoft.testplatform.objectmodel.17.1.0.nupkg.sha512",
     "C:\\Users\\gumig\\.nuget\\packages\\microsoft.testplatform.testhost\\17.1.0\\microsoft.testplatform.testhost.17.1.0.nupkg.sha512",
+    "C:\\Users\\gumig\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.15.1\\microsoft.visualstudio.azure.containers.tools.targets.1.15.1.nupkg.sha512",
     "C:\\Users\\gumig\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\gumig\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\gumig\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",

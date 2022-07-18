@@ -1,17 +1,19 @@
-FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
-EXPOSE 5001
+FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
+EXPOSE 80
 
-# Copy csproj and restore as distinct layers
-COPY *.csproj ./
-RUN dotnet restore
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+WORKDIR /src
+COPY ["IntelitraderAPI.csproj", "."]
+RUN dotnet restore "./IntelitraderAPI.csproj"
+COPY . .
+WORKDIR "/src/."
+RUN dotnet build "IntelitraderAPI.csproj" -c Release -o /app/build
 
-# Copy everything else and build
-COPY ../ ./
-RUN dotnet publish -c Release -o out
+FROM build AS publish
+RUN dotnet publish "IntelitraderAPI.csproj" -c Release -o /app/publish
 
-# Build runtime image
-FROM mcr.microsoft.com/dotnet/aspnet:6.0
+FROM base AS final
 WORKDIR /app
-COPY --from=build-env /app/out .
+COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "IntelitraderAPI.dll"]

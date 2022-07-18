@@ -11,12 +11,12 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:5001/api/Usuario/Listar",
-					"protocol": "https",
+					"raw": "http://localhost:8001/api/Usuario/Listar",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5001",
+					"port": "8001",
 					"path": [
 						"api",
 						"Usuario",
@@ -41,12 +41,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:5001/api/Usuario/Cadastrar",
-					"protocol": "https",
+					"raw": "http://localhost:8001/api/Usuario/Cadastrar",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5001",
+					"port": "8001",
 					"path": [
 						"api",
 						"Usuario",
@@ -71,12 +71,12 @@
 					}
 				},
 				"url": {
-					"raw": "https://localhost:5001/api/Usuario/Atualizar/dJ3z6Y",
-					"protocol": "https",
+					"raw": "http://localhost:8001/api/Usuario/Atualizar/dJ3z6Y",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5001",
+					"port": "8001",
 					"path": [
 						"api",
 						"Usuario",
@@ -93,17 +93,17 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "https://localhost:5001/api/Usuario/Deletar/9OOzPl",
-					"protocol": "https",
+					"raw": "http://localhost:8001/api/Usuario/Deletar/9PH3T0",
+					"protocol": "http",
 					"host": [
 						"localhost"
 					],
-					"port": "5001",
+					"port": "8001",
 					"path": [
 						"api",
 						"Usuario",
 						"Deletar",
-						"9OOzPl"
+						"9PH3T0"
 					]
 				}
 			},
