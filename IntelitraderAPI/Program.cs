@@ -1,4 +1,5 @@
 using IntelitraderAPI.Contexts;
+using IntelitraderAPI.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 using Newtonsoft.Json;
@@ -42,6 +43,9 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddDbContext<IntelitraderContext>(options =>
+        options.UseSqlServer("Data Source=sqldata; initial catalog=INTELITRADER; user Id=SA; pwd=senai@132;"));
+
 builder.Services.AddTransient<DbContext, IntelitraderContext>();
 
 var app = builder.Build();
@@ -50,6 +54,8 @@ if (!app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
 }
+
+DatabaseManagementService.MigrationInitialisation(app);
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

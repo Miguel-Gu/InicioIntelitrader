@@ -20,5 +20,7 @@ VALUES  ('sH2m5T', 'Gustavo', 'Silva', '17'),
 		('jS7b0P', 'Mariana', 'Santos', '13');
 GO
 
+DELETE FROM usuario WHERE id='jS7b0P';
+
 SELECT * FROM usuario
 SELECT * FROM logs

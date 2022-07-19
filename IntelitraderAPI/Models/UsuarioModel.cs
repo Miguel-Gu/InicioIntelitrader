@@ -71,18 +71,28 @@ namespace IntelitraderAPI.Models
                     Enumerable.Repeat(chars, 6)
                         .Select(s => s[random.Next(s.Length)])
                         .ToArray());
-                foreach (Usuario usuario in lista)
+                if (lista != null && lista.Count > 0)
                 {
-                    if (result != usuario.Id)
+                    foreach (Usuario usuario in lista)
                     {
-                        existe = false;
-                        id = result;
-                    }
-                    else
-                    {
-                        existe = true;
+                        if (result != usuario.Id)
+                        {
+                            existe = false;
+                            id = result;
+                        }
+                        else
+                        {
+                            existe = true;
+                        }
                     }
                 }
+                else
+                {
+                    existe = false;
+                    id = result;
+                }
+
+
             } while (existe);
 
             return id;
