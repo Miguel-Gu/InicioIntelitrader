@@ -6,14 +6,17 @@ namespace IntelitraderAPI.Models
     public class UsuarioModel
     {
         readonly IntelitraderContext ctx = new();
-        public void Cadastrar(Usuario novoUsuario)
+        public Usuario Cadastrar(string firstName, string? surname, int? age)
         {
-            if (novoUsuario != null)
-            {
-                novoUsuario.Id = GeraId();
-                ctx.Usuarios.Add(novoUsuario);
-                ctx.SaveChanges();
-            }
+            Usuario novoUsuario = new();
+            novoUsuario.FirstName = firstName;
+            novoUsuario.Surname = surname;
+            novoUsuario.Age = age;
+            novoUsuario.Id = GeraId();
+            ctx.Usuarios.Add(novoUsuario);
+            ctx.SaveChanges();
+            return novoUsuario;
+
         }
 
         public List<Usuario> Listar()
@@ -21,15 +24,24 @@ namespace IntelitraderAPI.Models
             return ctx.Usuarios.ToList();
         }
 
-        public Usuario? Atualizar(string id, Usuario usuarioAt)
+        public Usuario? Atualizar(string id, string? firstName, string? surname, int? age)
         {
             Usuario? usuarioBuscado = BuscarPorId(id);
 
             if (usuarioBuscado != null)
             {
-                usuarioBuscado.FirstName = usuarioAt.FirstName;
-                usuarioBuscado.Surname = usuarioAt.Surname;
-                usuarioBuscado.Age = usuarioAt.Age;
+                if (firstName != null)
+                {
+                    usuarioBuscado.FirstName = firstName;
+                }
+                if (surname != null)
+                {
+                    usuarioBuscado.Surname = surname;
+                }
+                if (age != null)
+                {
+                    usuarioBuscado.Age = age;
+                }
                 ctx.Usuarios.Update(usuarioBuscado);
                 ctx.SaveChanges();
 

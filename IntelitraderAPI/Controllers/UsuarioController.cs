@@ -1,5 +1,6 @@
 ﻿using IntelitraderAPI.Domains;
 using IntelitraderAPI.Models;
+using IntelitraderAPI.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -18,17 +19,17 @@ namespace IntelitraderAPI.Controllers
         private readonly UsuarioModel usuarioModel = new();
 
         [HttpPost("Cadastrar")]
-        public IActionResult Cadastrar(Usuario novoUsuario)
+        public IActionResult Cadastrar(CadastroViewModel novoUsuario)
         {
             try
             {
-                usuarioModel.Cadastrar(novoUsuario);
-                _logger.LogInformation("Usuario " + novoUsuario.FirstName + " Cadastrado");
-                return StatusCode(201, novoUsuario);
+                Usuario usuarioCadastrado = usuarioModel.Cadastrar(novoUsuario.firstName, novoUsuario.surname, novoUsuario.age);
+                _logger.LogInformation("Usuario " + usuarioCadastrado.FirstName + " Cadastrado");
+                return StatusCode(201, usuarioCadastrado);
             }
             catch (Exception error)
             {
-                _logger.LogError("Erro ao cadastrar usuario");
+                _logger.LogError("Erro ao cadastrar usuário. FirstName, Surname e age são campos obrigatórios");
                 return BadRequest(new
                 {
                     mensagem = "Erro ao cadastrar usuário. FirstName, Surname e age são campos obrigatórios",
@@ -56,11 +57,11 @@ namespace IntelitraderAPI.Controllers
         }
 
         [HttpPut("Atualizar/{id}")]
-        public IActionResult Atualizar(string id, Usuario usuarioAt)
+        public IActionResult Atualizar(string id, AtualizarViewModel usuarioAtualizado)
         {
             try
             {
-                Usuario? usuario = usuarioModel.Atualizar(id, usuarioAt);
+                Usuario? usuario = usuarioModel.Atualizar(id, usuarioAtualizado.firstName, usuarioAtualizado.surname, usuarioAtualizado.age);
                 _logger.LogInformation("Usuario " + id + " Atualizado");
                 return Ok(usuario);
             }

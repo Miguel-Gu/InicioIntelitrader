@@ -17,6 +17,7 @@ namespace IntelitraderAPI.Contexts
         {
         }
 
+        public virtual DbSet<Log> Logs { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -29,6 +30,11 @@ namespace IntelitraderAPI.Contexts
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<Log>(entity =>
+            {
+                entity.Property(e => e.TimeStamp).HasColumnType("datetime");
+            });
+
             modelBuilder.Entity<Usuario>(entity =>
             {
                 entity.ToTable("USUARIO");

@@ -1,5 +1,6 @@
 using IntelitraderAPI.Controllers;
 using IntelitraderAPI.Domains;
+using IntelitraderAPI.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using Moq;
@@ -14,10 +15,10 @@ namespace Test
             var logger = new Mock<ILogger<UsuarioController>>();
             var controlador = new UsuarioController(logger.Object);
 
-            Usuario novoUsuario = new();
-            novoUsuario.FirstName = "Primeiro";
-            novoUsuario.Surname = "Teste";
-            novoUsuario.Age = 7;
+            CadastroViewModel novoUsuario = new();
+            novoUsuario.firstName = "Primeiro";
+            novoUsuario.surname = "Teste";
+            novoUsuario.age = 7;
 
             var resultado = controlador.Cadastrar(novoUsuario);
             ObjectResult? resultadoAcao = resultado as ObjectResult;
@@ -43,10 +44,10 @@ namespace Test
             var logger = new Mock<ILogger<UsuarioController>>();
             var controlador = new UsuarioController(logger.Object);
 
-            Usuario usuarioAtualizado = new();
-            usuarioAtualizado.FirstName = "Terceiro";
-            usuarioAtualizado.Surname = "Teste";
-            usuarioAtualizado.Age = 14;
+            AtualizarViewModel usuarioAtualizado = new();
+            usuarioAtualizado.firstName = "Primeiro";
+            usuarioAtualizado.surname = "Teste";
+            usuarioAtualizado.age = 7;
 
             var resultado = controlador.Atualizar("1eefCL", usuarioAtualizado);
             Assert.IsType<OkObjectResult>(resultado);
