@@ -31,7 +31,7 @@ namespace IntelitraderAPI.Controllers
                 _logger.LogError("Erro ao cadastrar usuario");
                 return BadRequest(new
                 {
-                    mensagem = "Erro ao cadastrar usuário",
+                    mensagem = "Erro ao cadastrar usuário. FirstName, Surname e age são campos obrigatórios",
                     error
                 });
             }

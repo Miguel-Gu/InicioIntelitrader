@@ -1514,55 +1514,6 @@
           "ref/netstandard1.3/System.Console.dll": {}
         }
       },
-      "System.Data.Odbc/6.0.0": {
-        "type": "package",
-        "dependencies": {
-          "System.Text.Encoding.CodePages": "6.0.0"
-        },
-        "compile": {
-          "lib/net6.0/System.Data.Odbc.dll": {}
-        },
-        "runtime": {
-          "lib/net6.0/System.Data.Odbc.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
-        },
-        "runtimeTargets": {
-          "runtimes/freebsd/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "freebsd"
-          },
-          "runtimes/illumos/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "illumos"
-          },
-          "runtimes/ios/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "ios"
-          },
-          "runtimes/linux/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "linux"
-          },
-          "runtimes/osx/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "osx"
-          },
-          "runtimes/solaris/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "solaris"
-          },
-          "runtimes/tvos/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "tvos"
-          },
-          "runtimes/win/lib/net6.0/System.Data.Odbc.dll": {
-            "assetType": "runtime",
-            "rid": "win"
-          }
-        }
-      },
       "System.Diagnostics.Debug/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -2628,22 +2579,19 @@
           "ref/netstandard1.3/System.Text.Encoding.dll": {}
         }
       },
-      "System.Text.Encoding.CodePages/6.0.0": {
+      "System.Text.Encoding.CodePages/4.7.0": {
         "type": "package",
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "6.0.0"
+          "Microsoft.NETCore.Platforms": "3.1.0"
         },
         "compile": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {}
+          "lib/netstandard2.0/_._": {}
         },
         "runtime": {
-          "lib/net6.0/System.Text.Encoding.CodePages.dll": {}
-        },
-        "build": {
-          "buildTransitive/netcoreapp3.1/_._": {}
+          "lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         },
         "runtimeTargets": {
-          "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll": {
+          "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2956,8 +2904,7 @@
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.15.1",
           "Serilog.AspNetCore": "6.0.0",
           "Serilog.Sinks.MSSqlServer": "5.7.1",
-          "Swashbuckle.AspNetCore": "6.3.2",
-          "System.Data.Odbc": "6.0.0"
+          "Swashbuckle.AspNetCore": "6.3.2"
         },
         "compile": {
           "bin/placeholder/IntelitraderAPI.dll": {}
@@ -5992,57 +5939,6 @@
         "system.console.nuspec"
       ]
     },
-    "System.Data.Odbc/6.0.0": {
-      "sha512": "pnZjwe0Qwr1Rnp7NExd5zz4YwXJrYuAbWNKjEQpTzCEg6f/L5DYJS7w3hG3vgSj1t/r79UL390YzXIklf1VuQQ==",
-      "type": "package",
-      "path": "system.data.odbc/6.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "LICENSE.TXT",
-        "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Data.Odbc.targets",
-        "buildTransitive/netcoreapp3.1/_._",
-        "lib/net461/System.Data.Odbc.dll",
-        "lib/net461/System.Data.Odbc.xml",
-        "lib/net6.0/System.Data.Odbc.dll",
-        "lib/net6.0/System.Data.Odbc.xml",
-        "lib/netcoreapp3.1/System.Data.Odbc.dll",
-        "lib/netcoreapp3.1/System.Data.Odbc.xml",
-        "lib/netstandard2.0/System.Data.Odbc.dll",
-        "lib/netstandard2.0/System.Data.Odbc.xml",
-        "runtimes/freebsd/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/freebsd/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/freebsd/lib/netcoreapp3.1/System.Data.Odbc.dll",
-        "runtimes/freebsd/lib/netcoreapp3.1/System.Data.Odbc.xml",
-        "runtimes/illumos/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/illumos/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/ios/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/ios/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/linux/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/linux/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/linux/lib/netcoreapp3.1/System.Data.Odbc.dll",
-        "runtimes/linux/lib/netcoreapp3.1/System.Data.Odbc.xml",
-        "runtimes/osx/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/osx/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/osx/lib/netcoreapp3.1/System.Data.Odbc.dll",
-        "runtimes/osx/lib/netcoreapp3.1/System.Data.Odbc.xml",
-        "runtimes/solaris/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/solaris/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/tvos/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/tvos/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/win/lib/net461/System.Data.Odbc.dll",
-        "runtimes/win/lib/net461/System.Data.Odbc.xml",
-        "runtimes/win/lib/net6.0/System.Data.Odbc.dll",
-        "runtimes/win/lib/net6.0/System.Data.Odbc.xml",
-        "runtimes/win/lib/netcoreapp3.1/System.Data.Odbc.dll",
-        "runtimes/win/lib/netcoreapp3.1/System.Data.Odbc.xml",
-        "system.data.odbc.6.0.0.nupkg.sha512",
-        "system.data.odbc.nuspec",
-        "useSharedDesignerContext.txt"
-      ]
-    },
     "System.Diagnostics.Debug/4.3.0": {
       "sha512": "ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
       "type": "package",
@@ -8944,43 +8840,44 @@
         "system.text.encoding.nuspec"
       ]
     },
-    "System.Text.Encoding.CodePages/6.0.0": {
-      "sha512": "ZFCILZuOvtKPauZ/j/swhvw68ZRi9ATCfvGbk1QfydmcXBkIWecWKn/250UH7rahZ5OoDBaiAudJtPvLwzw85A==",
+    "System.Text.Encoding.CodePages/4.7.0": {
+      "sha512": "aeu4FlaUTemuT1qOd1MyU4T516QR4Fy+9yDbwWMPHOHy7U8FD6SgTzdZFO7gHcfAPHtECqInbwklVvUK4RHcNg==",
       "type": "package",
-      "path": "system.text.encoding.codepages/6.0.0",
+      "path": "system.text.encoding.codepages/4.7.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "buildTransitive/netcoreapp2.0/System.Text.Encoding.CodePages.targets",
-        "buildTransitive/netcoreapp3.1/_._",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
+        "lib/net46/System.Text.Encoding.CodePages.dll",
         "lib/net461/System.Text.Encoding.CodePages.dll",
         "lib/net461/System.Text.Encoding.CodePages.xml",
-        "lib/net6.0/System.Text.Encoding.CodePages.dll",
-        "lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
-        "lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
+        "lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
         "runtimes/win/lib/net461/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/net461/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/net6.0/System.Text.Encoding.CodePages.xml",
-        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.dll",
-        "runtimes/win/lib/netcoreapp3.1/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.dll",
+        "runtimes/win/lib/netcoreapp2.0/System.Text.Encoding.CodePages.xml",
+        "runtimes/win/lib/netstandard1.3/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll",
         "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.xml",
-        "system.text.encoding.codepages.6.0.0.nupkg.sha512",
+        "system.text.encoding.codepages.4.7.0.nupkg.sha512",
         "system.text.encoding.codepages.nuspec",
-        "useSharedDesignerContext.txt"
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Text.Encoding.Extensions/4.3.0": {
