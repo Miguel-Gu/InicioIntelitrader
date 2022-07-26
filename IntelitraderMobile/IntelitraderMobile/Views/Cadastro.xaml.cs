@@ -21,9 +21,17 @@ namespace IntelitraderMobile.Views
         }
         private void Botao_Clicked(object sender, EventArgs e)
         {
-            _service.CriaUsuario(FirstName.Text, SurName.Text, Convert.ToInt32(Age.Text));
-            Resposta.Text = "Usuário cadastrado com sucesso";
-            Navigation.PushAsync(new MainPage());
+            if (FirstName.Text != null & Age.Text != null)
+            {
+                _service.CriaUsuario(FirstName.Text, SurName.Text, Convert.ToInt32(Age.Text));
+                Resposta.Text = "Usuário cadastrado com sucesso";
+                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                Resposta.Text = "FirstName e Age são Campos obrigatórios";
+            }
+
         }
     }
 }

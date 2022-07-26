@@ -14,7 +14,7 @@ namespace IntelitraderMobile.Services
         public HttpClient _httpClient = new HttpClient();
         public List<Usuario> Listar()
         {
-            var response =  _httpClient.GetStringAsync("https://a690-177-33-68-169.sa.ngrok.io/api/Usuario/Listar").Result;
+            var response =  _httpClient.GetStringAsync("https://67da-177-33-68-169.sa.ngrok.io/api/Usuario/Listar").Result;
             usuarios = JsonConvert.DeserializeObject<List<Usuario>>(response);
             return usuarios;
         }
@@ -23,18 +23,18 @@ namespace IntelitraderMobile.Services
             UsuarioCadastro usuario = new UsuarioCadastro { firstName = primeiroNome, surname = segundoNome, age = idade };
             var json = JsonConvert.SerializeObject(usuario);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = _httpClient.PostAsync("https://a690-177-33-68-169.sa.ngrok.io/api/Usuario/Cadastrar", data);
+            var response = _httpClient.PostAsync("https://67da-177-33-68-169.sa.ngrok.io/api/Usuario/Cadastrar", data);
         }
         public async Task Delete(string id)
         {
-            var response = await _httpClient.DeleteAsync("https://a690-177-33-68-169.sa.ngrok.io/api/Usuario/Deletar/" + id);
+            var response = await _httpClient.DeleteAsync("https://67da-177-33-68-169.sa.ngrok.io/api/Usuario/Deletar/" + id);
         }
         public async Task Put(string id, string primeiroNome, string segundoNome, int idade)
         {
             Usuario usuario = new Usuario { firstName = primeiroNome, surname = segundoNome, age = idade };
             var json = JsonConvert.SerializeObject(usuario);
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            var response = await _httpClient.PutAsync("https://a690-177-33-68-169.sa.ngrok.io/api/Usuario/Atualizar/" + id, data);
+            var response = await _httpClient.PutAsync("https://67da-177-33-68-169.sa.ngrok.io/api/Usuario/Atualizar/" + id, data);
         }
     }
 }

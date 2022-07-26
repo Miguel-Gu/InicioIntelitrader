@@ -23,9 +23,16 @@ namespace IntelitraderMobile.Views
         }
         private void Botao_Clicked(object sender, EventArgs e)
         {
-            _ = _service.Put(id.Text, firstName.Text, surname.Text, Convert.ToInt32(age.Text));
-            Resposta.Text = "Usuário atualizado com sucesso";
-            Navigation.PushAsync(new MainPage());
+            if (firstName.Text != null & age.Text != null)
+            {
+                _ = _service.Put(id.Text, firstName.Text, surname.Text, Convert.ToInt32(age.Text));
+                Resposta.Text = "Usuário atualizado com sucesso";
+                Navigation.PushAsync(new MainPage());
+            }
+            else
+            {
+                Resposta.Text = "FirstName e Age são Campos obrigatórios";
+            }
         }
     }
 }
