@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "hxh62kKxgFbrZ6FXQVaJE7PLVz/8Si3FKMj/Ta4XHH0/XfCrmuJTfb2hB/OJN9hwOtq4jF4KNJiddgfk56778Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\gumig\\Desktop\\InicioIntelitrader\\IntelitraderMobile\\IntelitraderMobile\\IntelitraderMobile.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\gumig\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\gumig\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\gumig\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512",
+    "C:\\Users\\gumig\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\gumig\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
+    "C:\\Users\\gumig\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
+  ],
+  "logs": []
+}
