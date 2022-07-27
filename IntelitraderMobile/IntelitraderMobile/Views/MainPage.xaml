@@ -7,8 +7,7 @@
         <ScrollView>
             <StackLayout>
                 <Button Text="Cadastrar Novo Usuário" Clicked="TelaCadastro" FontSize="Medium" TextColor="Black"/>
-                <StackLayout Orientation="Horizontal" Spacing="50" Padding="10">
-                    <Label Text="Id" FontSize="Medium" TextColor="Black"/>
+                <StackLayout Orientation="Horizontal" Spacing="85" Padding="10">
                     <Label Text="FirstName" FontSize="Medium" TextColor="Black"/>
                     <Label Text="SurName" FontSize="Medium" TextColor="Black"/>
                     <Label Text="Age" FontSize="Medium" TextColor="Black"/>
@@ -17,8 +16,7 @@
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <ViewCell>
-                                <StackLayout Padding="10" Orientation="Horizontal" Spacing="22.5">
-                                    <Label Text="{Binding id}" FontSize="Medium" TextColor="Black"/>
+                                <StackLayout Padding="10" Orientation="Horizontal" Spacing="95">
                                     <Label Text="{Binding firstName}" FontSize="Medium" TextColor="Black"/>
                                     <Label Text="{Binding surname}" FontSize="Medium" TextColor="Black"/>
                                     <Label Text="{Binding age}" FontSize="Medium" TextColor="Black"/>

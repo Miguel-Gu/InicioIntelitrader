@@ -9,7 +9,7 @@
             <Entry x:Name="SurName" Keyboard="Text" Placeholder="SurName"/>
             <Entry x:Name="Age" Keyboard="Numeric" Placeholder="Age"/>
             <Button x:Name="Botao" Text="Cadastrar"/>
-            <Label x:Name="Resposta"/>
+            <Label x:Name="Resposta" FontSize="Medium" TextColor="Black"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
