@@ -29,7 +29,8 @@ namespace IntelitraderMobile.Views
                 _service.CriaUsuario(FirstName.Text, SurName.Text, Convert.ToInt32(Age.Text));
                 Resposta.Text = "Usuário cadastrado com sucesso. Redirecionando...";
                 Thread.Sleep(5000);
-                Navigation.PushAsync(new MainPage());
+                App.Current.MainPage = new MainPage();
+                Navigation.PopToRootAsync();
             }
             else
             {

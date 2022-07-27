@@ -33,7 +33,8 @@ namespace IntelitraderMobile.Views
                 _ = _service.Put(user.id, firstName.Text, surname.Text, Convert.ToInt32(age.Text));
                 Resposta.Text = "Usuário atualizado com sucesso. Redirecionando...";
                 Thread.Sleep(5000);
-                Navigation.PushAsync(new MainPage());
+                App.Current.MainPage = new MainPage();
+                Navigation.PopToRootAsync();
             }
             else
             {
